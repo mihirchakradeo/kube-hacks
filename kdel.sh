@@ -5,5 +5,5 @@
 # Example: kdel telegraf*
 
 function kdel() {
-  k delete $(kg po -o name --no-headers=true | grep $1)
+  kubectl delete $(kubectl get pods -o name --no-headers=true | grep $1)
 }
